@@ -13,4 +13,15 @@ class Tag extends Model
         'name',
         'slug',
     ];
+
+public function tags(){
+    return $this->belongsToMany(Article::class);
 }
+
+ public function articles(){
+    return $this->belongsToMany(Article::class);
+ }
+}
+
+
+
