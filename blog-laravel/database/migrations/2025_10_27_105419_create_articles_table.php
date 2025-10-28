@@ -17,7 +17,7 @@ return new class extends Migration
             $table ->string('title', 180);
             $table->string('slug', 200)->unique();
             $table->text('excerpt')->nullable();
-            $table->longText('content');
+            $table->longText('content')->nullable();
             $table->timestamps();
 
         });
