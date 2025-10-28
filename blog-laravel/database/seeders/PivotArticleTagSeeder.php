@@ -19,7 +19,7 @@ class PivotArticleTagSeeder extends Seeder
 
         Article::all()->each(function($article) use ($tagIds){
 
-      $article->tags()-sync($tagIds->random(rand(1,4)->all()));
+      $article->tags()->sync($tagIds->random(rand(1,4))->all());
 
         });
     }
